@@ -5,6 +5,7 @@ body {
 
 #page-title {
   /*text-decoration: underline;*/
+  margin-top: 5px;
   font-size: 3em;
   color: #FFFFFF;
   text-shadow: -1px 0 0 #000000, 1px 1px 0 #000000,
@@ -42,6 +43,7 @@ select {
   background: #f8ecc9;
   width: 385px;
   padding: 5px;
+  margin: 10px;
   font-size: 1.4em;
   line-height: 1;
   border: 0;
