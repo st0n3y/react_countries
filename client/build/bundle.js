@@ -19696,7 +19696,7 @@
 	var React = __webpack_require__(1);
 	var CountrySelector = __webpack_require__(160);
 	var CountryDisplay = __webpack_require__(161);
-	var BorderDisplay = __webpack_require__(165);
+	var BorderDisplay = __webpack_require__(162);
 	// var RegionSelector = require('./RegionSelector.jsx');
 	var _ = __webpack_require__(163);
 	
@@ -19885,7 +19885,47 @@
 	module.exports = CountryDisplay;
 
 /***/ },
-/* 162 */,
+/* 162 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var BorderDisplay = React.createClass({
+	  displayName: 'BorderDisplay',
+	
+	
+	  render: function render() {
+	    console.log(this.props.selected);
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h4',
+	        null,
+	        this.props.selected.nativeName
+	      ),
+	      React.createElement(
+	        'h5',
+	        null,
+	        'Capital: ',
+	        this.props.selected.capital
+	      ),
+	      React.createElement(
+	        'h5',
+	        null,
+	        'Population: ',
+	        this.props.selected.population.toLocaleString()
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = BorderDisplay;
+
+/***/ },
 /* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -36311,47 +36351,6 @@
 		return module;
 	}
 
-
-/***/ },
-/* 165 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var React = __webpack_require__(1);
-	
-	var BorderDisplay = React.createClass({
-	  displayName: 'BorderDisplay',
-	
-	
-	  render: function render() {
-	    console.log(this.props.selected);
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(
-	        'h4',
-	        null,
-	        this.props.selected.nativeName
-	      ),
-	      React.createElement(
-	        'h5',
-	        null,
-	        'Capital: ',
-	        this.props.selected.capital
-	      ),
-	      React.createElement(
-	        'h5',
-	        null,
-	        'Population: ',
-	        this.props.selected.population.toLocaleString()
-	      )
-	    );
-	  }
-	
-	});
-	
-	module.exports = BorderDisplay;
 
 /***/ }
 /******/ ]);
